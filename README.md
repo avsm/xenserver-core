@@ -58,9 +58,16 @@ On Debian-based distributions, the packages are built using `pbuilder`.
 `pbuilder` does run as root, so you may wish to add your user to the `sudoers` list.
 
 The build also depends on a more modern OCaml compiler than the version in Ubuntu, available from this PPA:
+
 ```
 deb http://ppa.launchpad.net/louis-gesbert/ocp/ubuntu raring main
 deb-src http://ppa.launchpad.net/louis-gesbert/ocp/ubuntu raring main
+```
+
+You can automatically add this to your local APT repository on Ubuntu by installing `software-properties-common` and typing in:
+
+```
+add-apt-repository ppa:louis-gesbert/ocp
 ```
 
 The steps to build Debian packages are the same as those to build RPMs:
